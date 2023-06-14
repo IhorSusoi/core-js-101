@@ -110,8 +110,13 @@ function getArrayOfStrings(arr) {
  *    [ 1, 2, 3, 4, 5, 'false' ]         => [ 1, 2, 3, 4, 5, 'false' ]
  *    [ false, 0, NaN, '', undefined ]   => [ ]
  */
-function removeFalsyValues(/* arr */) {
-  throw new Error('Not implemented');
+function removeFalsyValues(arr) {
+  const result = [];
+  arr.map((x) => {
+    if (x !== false && x !== undefined && x !== 0 && x !== '' && x !== null && !Number.isNaN(x)) result.push(x);
+    return 0;
+  });
+  return result;
 }
 
 /**
@@ -125,8 +130,13 @@ function removeFalsyValues(/* arr */) {
  *    => [ 'PERMANENT-INTERNSHIP', 'GLUTINOUS-SHRIEK', 'MULTIPLICATIVE-ELEVATION' ],
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
-function getUpperCaseStrings(/* arr */) {
-  throw new Error('Not implemented');
+function getUpperCaseStrings(arr) {
+  const res = arr;
+  res.map((x) => {
+    x.toUpperCase();
+    return 0;
+  });
+  return res;
 }
 
 
